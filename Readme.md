@@ -11,7 +11,7 @@ Creates a point cloud from the color annd depth (RGB-D) images.
 
 # Requirements
 MATLAB </br>
-MATLAB Computer Vision Toolbox (for point cloud visualization)
+MATLAB Computer Vision Toolbox (for point cloud visualization) </br>
 Python and packages
 
 # MATLAB Central
