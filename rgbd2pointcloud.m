@@ -10,47 +10,64 @@
 %
 %************************************************************************%
 %
-% Usage: obj                   = rgbd2pointcloud(color, depth, cam_intrinsics, json_filename)
+% Usage: obj                   = rgbd2pointcloud(color, depth, cam_intrinsics, ...
+%                                                json_filename)
 %        
 % Properties:
-%           color              - Number of nodes in the graph
-%           depth              - Radius that nodes within this radius will have edges connected
-%           json_filename      - Optional positions for nodes in the graph
-%           cam_intrinsics     - Dimension of the graph
+%           color              - Color image or file name
+%           depth              - Depth image or file name
+%           json_filename      - JSON file of camera intrinsic parameters
+%           cam_intrinsics     - camera intrinsic parameters (if no JSON
+%                                file is provided)
 %
 % Outputs: 
 %
-%           G                  - Graph object for the random geometric graph
-%           coor               - coordinates of all each point in the graph
+%           xyz                - X, Y and Z points
+%           rgb                - coordinates of all each point in the graph
+%           Point cloud file   - Output point cloud .ply or .pcd file
 %
 %--------------------------------------------------------------------------
-% Example 1: Generate a 2D geometric graph with 25 nodes using brutal force method
-% node_num = 25;      
-% radius = 0.5;  
-% pos = [];
-% dim = 2;       
-% method = 'BruteForce';         
-% showplot = 1;
-% [G,coor] = RandomGeometricGraph(node_num, radius, pos, dim, method, showplot);
+% Example 1: Generate a 3D point cloud without JSON file
+% Read the RGB and D images
+% color = imread("000004.jpg");
+% depth = imread("000004.png");
+% 
+% Json filename
+% json_filename = [];
+% 
+% Output point cloud filename
+% file_name = 'output.pcd';
+% 
+% Camera intrinsics
+% camera_intrinsic.cx              = 964.957;
+% camera_intrinsic.cy              = 522.586;
+% camera_intrinsic.fx              = 1390.53;
+% camera_intrinsic.fy              = 1386.99;
+% camera_intrinsic.depth_scale     = 1000; % Depth scale (constant) 
+%                                    to convert mm to m vice-versa
+% camera_intrinsic.width           = 640;
+% camera_intrinsic.height          = 480;
 %
-% Example 2: Generate a 2D geometric graph with 25 nodes using KDTree method
-% node_num = 25;      
-% radius = 0.5;  
-% pos = [];
-% dim = 2;       
-% method = 'KDTree';         
-% showplot = 1;
-% [G,coor] = RandomGeometricGraph(node_num, radius, pos, dim, method, showplot);
+% obj = rgbd2pointcloud(color, depth, camera_intrinsic, json_filename);
+% [xyz, rgb] = obj.xyz_rgb();
+% obj.write2file(xyz, rgb, file_name)
 %
-% Example 3: Generate a 3D geometric graph with 25 nodes using KDTree method
-% node_num = 25;      
-% radius = 0.1;  
-% pos = rand(100,3);
-% dim = 3;       
-% method = 'KDTree';         
-% showplot = 1;
-% [G,coor] = RandomGeometricGraph(node_num, radius, pos, dim, method, showplot);
-
+%--------------------------------------------------------------------------
+%
+% Example 2: Generate a 3D point cloud with JSON file
+% Read the RGB and D images
+% color = imread("000004.jpg");
+% depth = imread("000004.png");
+% 
+% Json filename
+% json_filename = 'camera.json';
+% 
+% Output point cloud filename
+% file_name = 'output.pcd';
+%
+% obj = rgbd2pointcloud(color, depth, camera_intrinsic, json_filename);
+% [xyz, rgb] = obj.xyz_rgb();
+% obj.write2file(xyz, rgb, file_name)
 
 % Class definition
 classdef rgbd2pointcloud < handle

@@ -32,7 +32,7 @@ camera_intrinsic.cx              = 964.957;
 camera_intrinsic.cy              = 522.586;
 camera_intrinsic.fx              = 1390.53;
 camera_intrinsic.fy              = 1386.99;
-camera_intrinsic.depth_scale     = 1000;
+camera_intrinsic.depth_scale     = 1000; % Depth scale (constant) to convert mm to m vice-versa
 camera_intrinsic.width           = 640;
 camera_intrinsic.height          = 480;
 
