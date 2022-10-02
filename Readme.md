@@ -9,6 +9,7 @@ Creates a point cloud from the color annd depth (RGB-D) images.
 
 # Requirements
 MATLAB
+Python and packages
 
 # MATLAB Central
 
