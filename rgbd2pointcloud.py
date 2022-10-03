@@ -10,10 +10,10 @@ from numpy import asarray
 # Inputs
 # ----------------------------------------------------------------------------------------------------------
 # Read color image
-color = Image.open("000001.jpg")
+color = Image.open("redwood_847.png")
 
 # Read depth image
-depth = Image.open("000001.png")
+depth = Image.open("redwood_847d.png")
 
 # Depth scale (constant) to convert mm to m vice-versa
 depth_scale = 1000
