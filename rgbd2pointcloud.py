@@ -28,9 +28,6 @@ pcd_filename = 'output_py.pcd'
 color = asarray(color)
 depth = asarray(depth)
 
-
-campar = o3d.camera.PinholeCameraIntrinsic(o3d.camera.PinholeCameraIntrinsicParameters.PrimeSenseDefault)
-
 # ----------------------------------------------------------------------------------------------------------
 # RGBD to pointcloud class
 # ----------------------------------------------------------------------------------------------------------
