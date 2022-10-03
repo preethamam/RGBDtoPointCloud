@@ -29,8 +29,8 @@
 %--------------------------------------------------------------------------
 % Example 1: Generate a 3D point cloud without JSON file
 % Read the RGB and D images
-% color = imread("000004.jpg");
-% depth = imread("000004.png");
+% color = imread("redwood_1.png");
+% depth = imread("redwood_1d.png");
 % 
 % Json filename
 % json_filename = [];
@@ -56,8 +56,8 @@
 %
 % Example 2: Generate a 3D point cloud with JSON file
 % Read the RGB and D images
-% color = imread("000004.jpg");
-% depth = imread("000004.png");
+% color = imread("redwood_1.png");
+% depth = imread("redwood_1d.png");
 % 
 % Json filename
 % json_filename = 'camera.json';
