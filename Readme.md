@@ -5,8 +5,8 @@ Creates a point cloud from the color annd depth (RGB-D) images.
 ## Example: Generated point clouds
 | Point clouds |
 | ------------- |
-|  <img width="526" alt="picture 1" src="https://user-images.githubusercontent.com/28588878/193473884-ec2abd9a-0fee-4c99-ac20-f1042297b242.png"> |
-|  <img width="512" alt="picture 2" src="https://user-images.githubusercontent.com/28588878/193473913-de1a2452-f64f-40df-aaed-147e895f4953.png"> |
+|  <img width="468" alt="picture 3" src="https://user-images.githubusercontent.com/28588878/193507224-0f32c0a0-44ad-4df1-91d1-0ba0ecbf86d4.png"> |
+|  <img width="494" alt="picture 4" src="https://user-images.githubusercontent.com/28588878/193507252-5f4a7589-05a2-413a-aded-30693527e7ce.png"> |
 
 # Requirements
 MATLAB </br>
