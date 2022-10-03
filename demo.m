@@ -18,8 +18,8 @@ Start = tic;
 %% Inputs
 %--------------------------------------------------------------------------
 % Read the RGB and D images
-color = imread("000004.jpg");
-depth = imread("000004.png");
+color = imread("redwood_847.png");
+depth = imread("redwood_847d.png");
 
 % Json filename
 json_filename = [];
@@ -28,10 +28,10 @@ json_filename = [];
 file_name = 'output.pcd';
 
 % Camera intrinsics
-camera_intrinsic.cx              = 964.957;
-camera_intrinsic.cy              = 522.586;
-camera_intrinsic.fx              = 1390.53;
-camera_intrinsic.fy              = 1386.99;
+camera_intrinsic.cx              = 319.5;
+camera_intrinsic.cy              = 239.5;
+camera_intrinsic.fx              = 525;
+camera_intrinsic.fy              = 525;
 camera_intrinsic.depth_scale     = 1000; % Depth scale (constant) to convert mm to m vice-versa
 camera_intrinsic.width           = 640;
 camera_intrinsic.height          = 480;
