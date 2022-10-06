@@ -30,14 +30,13 @@ class RGBD2Pointcloud:
         self.depth_image = np.reshape(np.array(depth_image), -1, order="C")
 
     # Camera intrinsics
-    @staticmethod
-    def __get_camera_intrincs():
+    def __get_camera_intrincs(self):
         """_summary_
 
         Returns:
             _type_: _description_
         """
-        camera_intrinsic = json.load(open(JSON_FILE))
+        camera_intrinsic = json.load(open(self.json_filename))
         cx = camera_intrinsic["cx"]
         cy = camera_intrinsic["cy"]
         fx = camera_intrinsic["fx"]
