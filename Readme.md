@@ -1,5 +1,7 @@
 # Introduction
-Creates a point cloud from the color annd depth (RGB-D) images.
+[![View Color and depth (RGB-D) images to point cloud on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/118490-color-and-depth-rgb-d-images-to-point-cloud) [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=preethamam/RGBDtoPointCloud)
+
+Creates a point cloud from the color and depth (RGB-D) images.
 
 # Quick Pipeline Visualization
 ## Example: Generated point clouds
@@ -13,6 +15,5 @@ MATLAB </br>
 MATLAB Computer Vision Toolbox (for point cloud file writing and visualization) </br>
 Python and packages
 
-# MATLAB Central
-[![View Color and depth (RGB-D) images to point cloud on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/118490-color-and-depth-rgb-d-images-to-point-cloud)
-
+# Feedback
+Please rate and provide feedback for the further improvements.
