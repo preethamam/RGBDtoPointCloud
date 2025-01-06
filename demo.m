@@ -18,8 +18,8 @@ Start = tic;
 %% Inputs
 %--------------------------------------------------------------------------
 % Read the RGB and D images
-color = imread("redwood_847.png");
-depth = imread("redwood_847d.png");
+color = imread("images/redwood_847.png");
+depth = imread("images/redwood_847d.png");
 
 % Json filename
 json_filename = [];
